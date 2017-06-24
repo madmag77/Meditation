@@ -14,6 +14,18 @@
 		EBDA52F81EEED21E00028E1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDA52F61EEED21E00028E1E /* LaunchScreen.storyboard */; };
 		EBDA53031EEED21E00028E1E /* MeditationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA53021EEED21E00028E1E /* MeditationTests.swift */; };
 		EBDA530E1EEED21E00028E1E /* MeditationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA530D1EEED21E00028E1E /* MeditationUITests.swift */; };
+		EBDA531E1EEED52600028E1E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDA531D1EEED52600028E1E /* HealthKit.framework */; };
+		EBE8FC021EFE899E00D51E18 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE8FC001EFE899E00D51E18 /* Interface.storyboard */; };
+		EBE8FC041EFE899E00D51E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE8FC031EFE899E00D51E18 /* Assets.xcassets */; };
+		EBE8FC0B1EFE899E00D51E18 /* MeditationWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EBE8FC0A1EFE899E00D51E18 /* MeditationWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EBE8FC121EFE899E00D51E18 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE8FC111EFE899E00D51E18 /* InterfaceController.swift */; };
+		EBE8FC141EFE899E00D51E18 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE8FC131EFE899E00D51E18 /* ExtensionDelegate.swift */; };
+		EBE8FC161EFE899E00D51E18 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE8FC151EFE899E00D51E18 /* NotificationController.swift */; };
+		EBE8FC181EFE899E00D51E18 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE8FC171EFE899E00D51E18 /* ComplicationController.swift */; };
+		EBE8FC1A1EFE899E00D51E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE8FC191EFE899E00D51E18 /* Assets.xcassets */; };
+		EBE8FC1E1EFE899E00D51E18 /* MeditationWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EBE8FBFE1EFE899E00D51E18 /* MeditationWatch.app */; };
+		EBE8FC281EFE8E1500D51E18 /* WatchHeartRateMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE8FC271EFE8E1500D51E18 /* WatchHeartRateMonitor.swift */; };
+		EBE9A0A71EFE98C9000E5247 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE9A0A61EFE98C9000E5247 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +43,46 @@
 			remoteGlobalIDString = EBDA52E91EEED21E00028E1E;
 			remoteInfo = Meditation;
 		};
+		EBE8FC0C1EFE899E00D51E18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBDA52E21EEED21E00028E1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBE8FC091EFE899E00D51E18;
+			remoteInfo = "MeditationWatch Extension";
+		};
+		EBE8FC1C1EFE899E00D51E18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBDA52E21EEED21E00028E1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBE8FBFD1EFE899E00D51E18;
+			remoteInfo = MeditationWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EBE8FC241EFE899E00D51E18 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EBE8FC0B1EFE899E00D51E18 /* MeditationWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE8FC261EFE899E00D51E18 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				EBE8FC1E1EFE899E00D51E18 /* MeditationWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EBDA52EA1EEED21E00028E1E /* Meditation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meditation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +98,24 @@
 		EBDA53091EEED21E00028E1E /* MeditationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeditationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDA530D1EEED21E00028E1E /* MeditationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationUITests.swift; sourceTree = "<group>"; };
 		EBDA530F1EEED21E00028E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBDA531B1EEED52500028E1E /* Meditation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Meditation.entitlements; sourceTree = "<group>"; };
+		EBDA531D1EEED52600028E1E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		EBE8FBFE1EFE899E00D51E18 /* MeditationWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeditationWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE8FC011EFE899E00D51E18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		EBE8FC031EFE899E00D51E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBE8FC051EFE899E00D51E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE8FC0A1EFE899E00D51E18 /* MeditationWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MeditationWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE8FC101EFE899E00D51E18 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		EBE8FC111EFE899E00D51E18 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		EBE8FC131EFE899E00D51E18 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		EBE8FC151EFE899E00D51E18 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		EBE8FC171EFE899E00D51E18 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		EBE8FC191EFE899E00D51E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBE8FC1B1EFE899E00D51E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE8FC271EFE8E1500D51E18 /* WatchHeartRateMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchHeartRateMonitor.swift; sourceTree = "<group>"; };
+		EBE8FC2D1EFE931300D51E18 /* MeditationWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeditationWatch.entitlements; sourceTree = "<group>"; };
+		EBE9A0A51EFE98C9000E5247 /* MeditationWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MeditationWatch Extension.entitlements"; sourceTree = "<group>"; };
+		EBE9A0A61EFE98C9000E5247 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDA531E1EEED52600028E1E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +141,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBE8FC071EFE899E00D51E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE9A0A71EFE98C9000E5247 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE8FC2B1EFE906C00D51E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,7 +165,10 @@
 				EBDA52EC1EEED21E00028E1E /* Meditation */,
 				EBDA53011EEED21E00028E1E /* MeditationTests */,
 				EBDA530C1EEED21E00028E1E /* MeditationUITests */,
+				EBE8FBFF1EFE899E00D51E18 /* MeditationWatch */,
+				EBE8FC0E1EFE899E00D51E18 /* MeditationWatch Extension */,
 				EBDA52EB1EEED21E00028E1E /* Products */,
+				EBDA531C1EEED52600028E1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +178,8 @@
 				EBDA52EA1EEED21E00028E1E /* Meditation.app */,
 				EBDA52FE1EEED21E00028E1E /* MeditationTests.xctest */,
 				EBDA53091EEED21E00028E1E /* MeditationUITests.xctest */,
+				EBE8FBFE1EFE899E00D51E18 /* MeditationWatch.app */,
+				EBE8FC0A1EFE899E00D51E18 /* MeditationWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +187,7 @@
 		EBDA52EC1EEED21E00028E1E /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
+				EBDA531B1EEED52500028E1E /* Meditation.entitlements */,
 				EBDA52ED1EEED21E00028E1E /* AppDelegate.swift */,
 				EBDA52EF1EEED21E00028E1E /* ViewController.swift */,
 				EBDA52F11EEED21E00028E1E /* Main.storyboard */,
@@ -125,6 +216,50 @@
 			path = MeditationUITests;
 			sourceTree = "<group>";
 		};
+		EBDA531C1EEED52600028E1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBE9A0A61EFE98C9000E5247 /* HealthKit.framework */,
+				EBDA531D1EEED52600028E1E /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBE8FBFF1EFE899E00D51E18 /* MeditationWatch */ = {
+			isa = PBXGroup;
+			children = (
+				EBE8FC2D1EFE931300D51E18 /* MeditationWatch.entitlements */,
+				EBE8FC001EFE899E00D51E18 /* Interface.storyboard */,
+				EBE8FC031EFE899E00D51E18 /* Assets.xcassets */,
+				EBE8FC051EFE899E00D51E18 /* Info.plist */,
+			);
+			path = MeditationWatch;
+			sourceTree = "<group>";
+		};
+		EBE8FC0E1EFE899E00D51E18 /* MeditationWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EBE9A0A51EFE98C9000E5247 /* MeditationWatch Extension.entitlements */,
+				EBE8FC111EFE899E00D51E18 /* InterfaceController.swift */,
+				EBE8FC131EFE899E00D51E18 /* ExtensionDelegate.swift */,
+				EBE8FC151EFE899E00D51E18 /* NotificationController.swift */,
+				EBE8FC171EFE899E00D51E18 /* ComplicationController.swift */,
+				EBE8FC271EFE8E1500D51E18 /* WatchHeartRateMonitor.swift */,
+				EBE8FC191EFE899E00D51E18 /* Assets.xcassets */,
+				EBE8FC1B1EFE899E00D51E18 /* Info.plist */,
+				EBE8FC0F1EFE899E00D51E18 /* Supporting Files */,
+			);
+			path = "MeditationWatch Extension";
+			sourceTree = "<group>";
+		};
+		EBE8FC0F1EFE899E00D51E18 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBE8FC101EFE899E00D51E18 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +270,12 @@
 				EBDA52E61EEED21E00028E1E /* Sources */,
 				EBDA52E71EEED21E00028E1E /* Frameworks */,
 				EBDA52E81EEED21E00028E1E /* Resources */,
+				EBE8FC261EFE899E00D51E18 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EBE8FC1D1EFE899E00D51E18 /* PBXTargetDependency */,
 			);
 			name = Meditation;
 			productName = Meditation;
@@ -181,18 +318,61 @@
 			productReference = EBDA53091EEED21E00028E1E /* MeditationUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		EBE8FBFD1EFE899E00D51E18 /* MeditationWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE8FC251EFE899E00D51E18 /* Build configuration list for PBXNativeTarget "MeditationWatch" */;
+			buildPhases = (
+				EBE8FBFC1EFE899E00D51E18 /* Resources */,
+				EBE8FC241EFE899E00D51E18 /* Embed App Extensions */,
+				EBE8FC2B1EFE906C00D51E18 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBE8FC0D1EFE899E00D51E18 /* PBXTargetDependency */,
+			);
+			name = MeditationWatch;
+			productName = MeditationWatch;
+			productReference = EBE8FBFE1EFE899E00D51E18 /* MeditationWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		EBE8FC091EFE899E00D51E18 /* MeditationWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE8FC231EFE899E00D51E18 /* Build configuration list for PBXNativeTarget "MeditationWatch Extension" */;
+			buildPhases = (
+				EBE8FC061EFE899E00D51E18 /* Sources */,
+				EBE8FC071EFE899E00D51E18 /* Frameworks */,
+				EBE8FC081EFE899E00D51E18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MeditationWatch Extension";
+			productName = "MeditationWatch Extension";
+			productReference = EBE8FC0A1EFE899E00D51E18 /* MeditationWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		EBDA52E21EEED21E00028E1E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = MadMag;
 				TargetAttributes = {
 					EBDA52E91EEED21E00028E1E = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					EBDA52FD1EEED21E00028E1E = {
 						CreatedOnToolsVersion = 9.0;
@@ -201,6 +381,33 @@
 					EBDA53081EEED21E00028E1E = {
 						CreatedOnToolsVersion = 9.0;
 						TestTargetID = EBDA52E91EEED21E00028E1E;
+					};
+					EBE8FBFD1EFE899E00D51E18 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes.watchos.app = {
+								enabled = 1;
+							};
+						};
+					};
+					EBE8FC091EFE899E00D51E18 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes.watchos.extension = {
+								enabled = 1;
+							};
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -220,6 +427,8 @@
 				EBDA52E91EEED21E00028E1E /* Meditation */,
 				EBDA52FD1EEED21E00028E1E /* MeditationTests */,
 				EBDA53081EEED21E00028E1E /* MeditationUITests */,
+				EBE8FBFD1EFE899E00D51E18 /* MeditationWatch */,
+				EBE8FC091EFE899E00D51E18 /* MeditationWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +455,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE8FBFC1EFE899E00D51E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE8FC041EFE899E00D51E18 /* Assets.xcassets in Resources */,
+				EBE8FC021EFE899E00D51E18 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE8FC081EFE899E00D51E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE8FC1A1EFE899E00D51E18 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +503,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBE8FC061EFE899E00D51E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE8FC161EFE899E00D51E18 /* NotificationController.swift in Sources */,
+				EBE8FC181EFE899E00D51E18 /* ComplicationController.swift in Sources */,
+				EBE8FC141EFE899E00D51E18 /* ExtensionDelegate.swift in Sources */,
+				EBE8FC121EFE899E00D51E18 /* InterfaceController.swift in Sources */,
+				EBE8FC281EFE8E1500D51E18 /* WatchHeartRateMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +527,16 @@
 			isa = PBXTargetDependency;
 			target = EBDA52E91EEED21E00028E1E /* Meditation */;
 			targetProxy = EBDA530A1EEED21E00028E1E /* PBXContainerItemProxy */;
+		};
+		EBE8FC0D1EFE899E00D51E18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBE8FC091EFE899E00D51E18 /* MeditationWatch Extension */;
+			targetProxy = EBE8FC0C1EFE899E00D51E18 /* PBXContainerItemProxy */;
+		};
+		EBE8FC1D1EFE899E00D51E18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBE8FBFD1EFE899E00D51E18 /* MeditationWatch */;
+			targetProxy = EBE8FC1C1EFE899E00D51E18 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -307,6 +555,14 @@
 				EBDA52F71EEED21E00028E1E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EBE8FC001EFE899E00D51E18 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE8FC011EFE899E00D51E18 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -332,6 +588,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -387,6 +645,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -419,8 +679,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Meditation/Meditation.entitlements;
 				DEVELOPMENT_TEAM = STZB53GU8R;
 				INFOPLIST_FILE = Meditation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MadMag.Meditation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,8 +695,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Meditation/Meditation.entitlements;
 				DEVELOPMENT_TEAM = STZB53GU8R;
 				INFOPLIST_FILE = Meditation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MadMag.Meditation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +769,90 @@
 			};
 			name = Release;
 		};
+		EBE8FC1F1EFE899E00D51E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_ENTITLEMENTS = MeditationWatch/MeditationWatch.entitlements;
+				DEVELOPMENT_TEAM = STZB53GU8R;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				IBSC_MODULE = MeditationWatch_Extension;
+				INFOPLIST_FILE = MeditationWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MadMag.Meditation.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		EBE8FC201EFE899E00D51E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_ENTITLEMENTS = MeditationWatch/MeditationWatch.entitlements;
+				DEVELOPMENT_TEAM = STZB53GU8R;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				IBSC_MODULE = MeditationWatch_Extension;
+				INFOPLIST_FILE = MeditationWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MadMag.Meditation.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		EBE8FC211EFE899E00D51E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_ENTITLEMENTS = "MeditationWatch Extension/MeditationWatch Extension.entitlements";
+				DEVELOPMENT_TEAM = STZB53GU8R;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = "MeditationWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MadMag.Meditation.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		EBE8FC221EFE899E00D51E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_ENTITLEMENTS = "MeditationWatch Extension/MeditationWatch Extension.entitlements";
+				DEVELOPMENT_TEAM = STZB53GU8R;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = "MeditationWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MadMag.Meditation.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -524,6 +872,7 @@
 				EBDA53141EEED21E00028E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EBDA53151EEED21E00028E1E /* Build configuration list for PBXNativeTarget "MeditationTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +881,7 @@
 				EBDA53171EEED21E00028E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EBDA53181EEED21E00028E1E /* Build configuration list for PBXNativeTarget "MeditationUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +890,25 @@
 				EBDA531A1EEED21E00028E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE8FC231EFE899E00D51E18 /* Build configuration list for PBXNativeTarget "MeditationWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE8FC211EFE899E00D51E18 /* Debug */,
+				EBE8FC221EFE899E00D51E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE8FC251EFE899E00D51E18 /* Build configuration list for PBXNativeTarget "MeditationWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE8FC1F1EFE899E00D51E18 /* Debug */,
+				EBE8FC201EFE899E00D51E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
