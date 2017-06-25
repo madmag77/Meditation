@@ -13,9 +13,12 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var periodPicker: WKInterfacePicker!
     @IBOutlet var startBtn: WKInterfaceButton!
     @IBOutlet var timer: WKInterfaceTimer!
+    @IBOutlet var heartRateLabel: WKInterfaceLabel!
     
     var countDownTimer: Timer?
-    let hrMonitor: WatchHeartRateMonitor = WatchHeartRateMonitor()
+    lazy var hrMonitor: WatchHeartRateMonitor = {
+        WatchHeartRateMonitor(with: self as WatchHeartRateMonitorDelegate)
+    } ()
     
     var selectedPeriod: Int = 0
     
@@ -49,7 +52,7 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func startBtnTap() {
         hrMonitor.isMonitoring = !hrMonitor.isMonitoring
-         hrMonitor.isMonitoring ? startMonitoring() : stopMonitoring()
+        hrMonitor.isMonitoring ? startMonitoring() : stopMonitoring()
     }
     
     internal func startMonitoring() {
@@ -75,10 +78,11 @@ class InterfaceController: WKInterfaceController {
     }
     
     internal func startTimer() {
+        let interval = TimeInterval(selectedPeriod * 10 * 60)
         timer.stop()
-        timer.setDate(Date(timeInterval: TimeInterval(selectedPeriod * 10 * 60), since: Date()))
+        timer.setDate(Date(timeInterval: interval, since: Date()))
         timer.start()
-        countDownTimer = Timer(timeInterval: TimeInterval(selectedPeriod * 10 * 60), repeats: false, block: {_ in
+        countDownTimer = Timer(timeInterval: interval, repeats: false, block: {_ in
             self.stopMonitoring()
         })
     }
@@ -86,5 +90,12 @@ class InterfaceController: WKInterfaceController {
     internal func stopTimer() {
          timer.stop()
     }
+}
+
+extension InterfaceController: WatchHeartRateMonitorDelegate {
+    func updateHeartRate(_ value: Double) {
+        heartRateLabel.setText("\(Int(value)) \(heartRateUnitString)")
+    }
+    
     
 }

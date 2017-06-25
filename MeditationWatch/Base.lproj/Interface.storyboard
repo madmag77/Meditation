@@ -18,7 +18,12 @@
                                 <action selector="periodChoosed:" destination="AgC-eL-Hgc" id="Mgy-hy-BdZ"/>
                             </connections>
                         </picker>
-                        <timer alignment="center" textAlignment="center" format="abbreviated" id="efR-tS-LZA"/>
+                        <group width="1" alignment="left" id="hbB-Ii-ZJg">
+                            <items>
+                                <timer alignment="left" textAlignment="center" format="abbreviated" id="efR-tS-LZA"/>
+                                <label alignment="right" text="Label" id="eJp-Uf-1tY" userLabel="heartRate"/>
+                            </items>
+                        </group>
                         <button width="1" alignment="left" title="Start" id="TEA-Vh-1Nt">
                             <connections>
                                 <action selector="startBtnTap" destination="AgC-eL-Hgc" id="dFR-e5-qbt"/>
@@ -26,6 +31,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="heartRateLabel" destination="eJp-Uf-1tY" id="QAu-qG-oRo"/>
                         <outlet property="periodPicker" destination="8ld-nf-k3k" id="pU4-Zo-KLl"/>
                         <outlet property="startBtn" destination="TEA-Vh-1Nt" id="q45-bO-D9l"/>
                         <outlet property="timer" destination="efR-tS-LZA" id="z9J-Su-2KC"/>

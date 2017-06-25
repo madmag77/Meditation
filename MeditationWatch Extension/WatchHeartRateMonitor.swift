@@ -9,11 +9,25 @@
 import Foundation
 import HealthKit
 
+let heartRateUnitString: String = "count/min"
+let meditationHKObjectType = HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!
+
+public protocol WatchHeartRateMonitorDelegate: class {
+    func updateHeartRate(_ value: Double)
+}
+
 public class WatchHeartRateMonitor: NSObject {
     var workoutSession: HKWorkoutSession?
     var healthStore: HKHealthStore = HKHealthStore()
-    var workoutStartDate: Date! = Date()
-    let configuration = HKWorkoutConfiguration()
+    
+    lazy var configuration: HKWorkoutConfiguration = {
+        let configuration = HKWorkoutConfiguration()
+        configuration.activityType = .mindAndBody
+        configuration.locationType = .indoor
+        return configuration
+    } ()
+    
+    let heartRateUnit: HKUnit = HKUnit(from: heartRateUnitString)
     
     var isMonitoring: Bool = false {
         didSet {
@@ -24,11 +38,18 @@ public class WatchHeartRateMonitor: NSObject {
             }
         }
     }
-        
-    fileprivate func startMonitoring() {
+    
+    weak var delegate: WatchHeartRateMonitorDelegate?
+    
+    public init(with delegate: WatchHeartRateMonitorDelegate?) {
+        super.init()
+        self.delegate = delegate
+    }
+    
+    fileprivate func requestAuthorization() {
         var readDataTypes: Set<HKObjectType> = Set<HKObjectType>()
         readDataTypes.insert(HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!)
-        readDataTypes.insert(HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!)
+        readDataTypes.insert(meditationHKObjectType)
         
         var writeDataTypes: Set<HKSampleType> = Set<HKSampleType>()
         writeDataTypes.insert(HKSampleType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!)
@@ -38,78 +59,83 @@ public class WatchHeartRateMonitor: NSObject {
                 print(error.debugDescription)
             }
         }
+    }
         
-        workoutStartDate = Date()
-        
-        configuration.activityType = .mindAndBody
-        configuration.locationType = .indoor
+    fileprivate func startMonitoring() {
+        requestAuthorization()
         
         do {
             workoutSession = try HKWorkoutSession(configuration: configuration)
-            
             workoutSession!.delegate = self
             healthStore.start(workoutSession!)
         }
         catch let error as NSError {
-            // Perform proper error handling here...
+            //TODO: Perform proper error handling here...
             fatalError("*** Unable to create the workout session: \(error.localizedDescription) ***")
         }
-        
-        // Start the workout session
-        
-        // This is the type you want updates on. It can be any health kit type, including heart rate.
+    }
+    
+    fileprivate func stopMonitoring() {
+        healthStore.end(workoutSession!)
+    }
+    
+    fileprivate func workoutStarted() {
         let heartRateType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)
         
-        // Match samples with a start date after the workout start
-        let predicate = HKQuery.predicateForSamples(withStart: workoutStartDate, end: nil, options: [])
+        let predicate = HKQuery.predicateForSamples(withStart: workoutSession?.startDate, end: nil, options: [])
         
         let heartRateQuery = HKAnchoredObjectQuery(type: heartRateType!,
                                                    predicate: predicate,
                                                    anchor: HKQueryAnchor(fromValue: Int(HKAnchoredObjectQueryNoAnchor)),
                                                    limit: 0) { (query, newSamples, deletedSamples, newAnchor, error) -> Void in
-                                                    print("query:\n")
-                                                    for sample in newSamples! {
-                                                        print(sample)
-                                                    }
+                                                    //not needed to process archive data
         }
         
-        // This is called each time a new value is entered into HealthKit (samples may be batched together for efficiency)
         heartRateQuery.updateHandler = { (query, samples, deletedObjects, anchor, error) -> Void in
-            print("update:\n")
-            for sample in samples! {
-                print(sample)
+            guard let sample = samples?.last, let data: HKQuantitySample = sample as? HKQuantitySample else {
+                return
             }
+            
+            self.delegate?.updateHeartRate(data.quantity.doubleValue(for: self.heartRateUnit))
         }
         
-        // Start the query
         healthStore.execute(heartRateQuery)
     }
     
-    func stopMonitoring() {
-        healthStore.end(workoutSession!)
+    fileprivate func workoutEnded() {
+        saveMeditationInStore()
+    }
+    
+    fileprivate func saveMeditationInStore() {
+        guard let workoutSession = workoutSession, let startDate = workoutSession.startDate, let endDate = workoutSession.endDate else {
+            return
+        }
+        let smpleObject = HKCategorySample(type: meditationHKObjectType, value: HKCategoryValue.notApplicable.rawValue, start: startDate, end: endDate)
+        
+        healthStore.save(smpleObject) { (success, error) -> Void in
+            guard success else {
+                //TODO: Perform proper error handling here...
+                fatalError("*** An error occurred while saving the " +
+                    "workout: \(error?.localizedDescription)")
+            }
+        }
     }
 }
 
 extension WatchHeartRateMonitor: HKWorkoutSessionDelegate {
     public func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
-        print("toState \(toState)")
-        
-        if toState == .ended {
-            // Now create the sample
-            let smpleObject = HKCategorySample(type: HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!, value: HKCategoryValue.notApplicable.rawValue, start: workoutSession.startDate!, end: workoutSession.endDate!)
-            
-            // Save the workout before adding detailed samples.
-            healthStore.save(smpleObject) { (success, error) -> Void in
-                guard success else {
-                    // Perform proper error handling here...
-                    fatalError("*** An error occurred while saving the " +
-                        "workout: \(error?.localizedDescription)")
-                }
-            }
+        switch (fromState, toState) {
+        case (.notStarted, .running):
+            workoutStarted()
+        case (.running, .ended):
+            workoutEnded()
+        default:
+            return
         }
     }
     
     public func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
+         //TODO: Perform proper error handling here...
         print("error \(error)")
     }
 }
