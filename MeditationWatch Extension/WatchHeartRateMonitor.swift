@@ -11,6 +11,7 @@ import HealthKit
 
 let heartRateUnitString: String = "count/min"
 let meditationHKObjectType = HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!
+let heartRateHKObjectType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
 
 public protocol WatchHeartRateMonitorDelegate: class {
     func updateHeartRate(_ value: Double)
@@ -19,6 +20,8 @@ public protocol WatchHeartRateMonitorDelegate: class {
 public class WatchHeartRateMonitor: NSObject {
     var workoutSession: HKWorkoutSession?
     var healthStore: HKHealthStore = HKHealthStore()
+    let readDataTypes: Set<HKObjectType> = [heartRateHKObjectType, meditationHKObjectType]
+    let writeDataTypes: Set<HKSampleType> = [meditationHKObjectType]
     
     lazy var configuration: HKWorkoutConfiguration = {
         let configuration = HKWorkoutConfiguration()
@@ -47,16 +50,10 @@ public class WatchHeartRateMonitor: NSObject {
     }
     
     fileprivate func requestAuthorization() {
-        var readDataTypes: Set<HKObjectType> = Set<HKObjectType>()
-        readDataTypes.insert(HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!)
-        readDataTypes.insert(meditationHKObjectType)
-        
-        var writeDataTypes: Set<HKSampleType> = Set<HKSampleType>()
-        writeDataTypes.insert(HKSampleType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!)
-        
         self.healthStore.requestAuthorization(toShare: writeDataTypes, read: readDataTypes) { (success, error) in
             if !success {
-                print(error.debugDescription)
+                //TODO: Perform proper error handling here...
+                fatalError("*** Unable to create the workout session: \(error?.localizedDescription) ***")
             }
         }
     }
