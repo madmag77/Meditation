@@ -7,8 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0518CA35CA9FFCF2B8EBCCC7 /* MDMeditationsListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCAEEF931B31FA7EBF24B6 /* MDMeditationsListInteractorInput.swift */; };
+		0E37CEFB26D57CD0C074D7D5 /* MDMeditationsListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F8CAC32A1F184D91B68A5C /* MDMeditationsListConfigurator.swift */; };
+		12C2700BC8072B0E27DA5BC6 /* MDMeditationsListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39855EF1154812BF6B7EC0C3 /* MDMeditationsListInteractorOutput.swift */; };
+		21E47AD9DD1386E757CF64F3 /* MDMeditationsListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE54E91330DAE054C4D809 /* MDMeditationsListRouterInput.swift */; };
+		2339BF0DEF58EC8AE2556AA9 /* MDMeditationsListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40D3E6CAB5E3762ABFC1CD /* MDMeditationsListViewInput.swift */; };
+		356139A2893337C7512F6606 /* MDMeditationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133608DE766FB980242F744 /* MDMeditationsListViewController.swift */; };
+		3A6468B1D5AADBE6C30C6B23 /* MDMeditationsListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0D0F6FB04EBEBE63198125 /* MDMeditationsListViewOutput.swift */; };
+		4336666BCE06B432DE1E39FA /* MDMeditationChartInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E1F12FD62B4840D8500A0 /* MDMeditationChartInteractorOutput.swift */; };
+		692DF5390402846B38B9019D /* MDMeditationChartModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F31A8D208AB982BC588613 /* MDMeditationChartModuleInput.swift */; };
+		776D03DE41962C44F44B5A5D /* MDMeditationChartInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BF75F4B2C905A0C65D848 /* MDMeditationChartInteractorInput.swift */; };
+		7969BAB8D52807ADDA81DC88 /* MDMeditationChartConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C8A2F51AE182C9B6DDC8B /* MDMeditationChartConfigurator.swift */; };
+		7CCCEED73F62E1D9C9172346 /* MDMeditationChartRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E26AAF45E9849D121E9109 /* MDMeditationChartRouterInput.swift */; };
+		7DC0752E0AF421D1A74AA392 /* Pods_Meditation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72C40F15F32E64697D8E174 /* Pods_Meditation.framework */; };
+		7E321DC5AE3A6FBA9AA2C3AD /* MDMeditationChartViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E2769D7B56FEF206C57E0 /* MDMeditationChartViewOutput.swift */; };
+		7F5E9787B74A3F0EB15F834A /* MDMeditationsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027369D082EC84755F7C1A5 /* MDMeditationsListPresenter.swift */; };
+		7F9DCDBD4D804E4AF6D4E821 /* MDMeditationsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6164E7E2B52D9642FC540C /* MDMeditationsListRouter.swift */; };
+		80CD31E0F57F16418FC4EF3E /* MDMeditationChartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8CBC7B28F79367AEF9F69 /* MDMeditationChartRouter.swift */; };
+		8DA88BEEBC34044B1322348A /* MDMeditationsListModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB21479A094FDF9C56ADDB5 /* MDMeditationsListModuleInput.swift */; };
+		9563FD2C614CFBE8C6B82583 /* Pods_MeditationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5308EC0AE580E2F86C049DC7 /* Pods_MeditationTests.framework */; };
+		98A373FD0ACE83AE08B4492E /* MDMeditationChartViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A45C8708835B62E13F16580 /* MDMeditationChartViewInput.swift */; };
+		9EB02687EDBECFA94E93BCB4 /* MDMeditationsListInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46050A1C90DB3C1CC650FCA1 /* MDMeditationsListInitializer.swift */; };
+		AA1B8D110FCFB9E32035CBF0 /* MDMeditationChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265C0C042EC77866A1BA3E46 /* MDMeditationChartViewController.swift */; };
+		BB716297DD3FC4FA8039E140 /* MDMeditationChartInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C759DD0B83ADFFC3721571 /* MDMeditationChartInitializer.swift */; };
+		C1F48D784EE747CA79F0A68A /* MDMeditationChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D99FCEFD0807415121C1C6 /* MDMeditationChartInteractor.swift */; };
+		E18501CACB062452CF02EFB0 /* MDMeditationsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EBDE1964274617702652CA /* MDMeditationsListInteractor.swift */; };
+		E18E51BE357D08BF24D9AAD4 /* MDMeditationChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B19D5F5D2D5A87249BB7E4 /* MDMeditationChartPresenter.swift */; };
+		EB72073D1EFFF2530080FE5F /* HKQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72073C1EFFF2530080FE5F /* HKQueryService.swift */; };
+		EB9908C71F0003A600C4F440 /* IGListKitDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9908C61F0003A600C4F440 /* IGListKitDataSource.swift */; };
+		EB9908CA1F00086500C4F440 /* MeditationListSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9908C91F00086500C4F440 /* MeditationListSectionController.swift */; };
+		EB9908CC1F0009DF00C4F440 /* MeditationListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9908CB1F0009DF00C4F440 /* MeditationListViewCell.swift */; };
+		EB9908CE1F0010C700C4F440 /* MeditationModelsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9908CD1F0010C700C4F440 /* MeditationModelsFactory.swift */; };
 		EBDA52EE1EEED21E00028E1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA52ED1EEED21E00028E1E /* AppDelegate.swift */; };
-		EBDA52F01EEED21E00028E1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA52EF1EEED21E00028E1E /* ViewController.swift */; };
 		EBDA52F31EEED21E00028E1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDA52F11EEED21E00028E1E /* Main.storyboard */; };
 		EBDA52F51EEED21E00028E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBDA52F41EEED21E00028E1E /* Assets.xcassets */; };
 		EBDA52F81EEED21E00028E1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDA52F61EEED21E00028E1E /* LaunchScreen.storyboard */; };
@@ -85,9 +115,38 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02B19D5F5D2D5A87249BB7E4 /* MDMeditationChartPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartPresenter.swift; path = ../../../../Meditation/modules/MeditationChart/Presenter/MDMeditationChartPresenter.swift; sourceTree = "<group>"; };
+		07C759DD0B83ADFFC3721571 /* MDMeditationChartInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartInitializer.swift; path = ../../../../Meditation/modules/MeditationChart/Configurator/MDMeditationChartInitializer.swift; sourceTree = "<group>"; };
+		09E26AAF45E9849D121E9109 /* MDMeditationChartRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartRouterInput.swift; path = ../../../../Meditation/modules/MeditationChart/Router/MDMeditationChartRouterInput.swift; sourceTree = "<group>"; };
+		0A45C8708835B62E13F16580 /* MDMeditationChartViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartViewInput.swift; path = ../../../../Meditation/modules/MeditationChart/View/MDMeditationChartViewInput.swift; sourceTree = "<group>"; };
+		0B23BFE66AA6B1857D3E74C4 /* Pods-MeditationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeditationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeditationTests/Pods-MeditationTests.release.xcconfig"; sourceTree = "<group>"; };
+		1133608DE766FB980242F744 /* MDMeditationsListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListViewController.swift; sourceTree = "<group>"; };
+		127E2769D7B56FEF206C57E0 /* MDMeditationChartViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartViewOutput.swift; path = ../../../../Meditation/modules/MeditationChart/View/MDMeditationChartViewOutput.swift; sourceTree = "<group>"; };
+		19D99FCEFD0807415121C1C6 /* MDMeditationChartInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartInteractor.swift; path = ../../../../Meditation/modules/MeditationChart/Interactor/MDMeditationChartInteractor.swift; sourceTree = "<group>"; };
+		1C40D3E6CAB5E3762ABFC1CD /* MDMeditationsListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListViewInput.swift; sourceTree = "<group>"; };
+		265C0C042EC77866A1BA3E46 /* MDMeditationChartViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartViewController.swift; path = ../../../../Meditation/modules/MeditationChart/View/MDMeditationChartViewController.swift; sourceTree = "<group>"; };
+		293A14A9A41A2EA8D68E44F6 /* Pods-MeditationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeditationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeditationTests/Pods-MeditationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		39855EF1154812BF6B7EC0C3 /* MDMeditationsListInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListInteractorOutput.swift; sourceTree = "<group>"; };
+		3B5E1F12FD62B4840D8500A0 /* MDMeditationChartInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartInteractorOutput.swift; path = ../../../../Meditation/modules/MeditationChart/Interactor/MDMeditationChartInteractorOutput.swift; sourceTree = "<group>"; };
+		3DB21479A094FDF9C56ADDB5 /* MDMeditationsListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListModuleInput.swift; sourceTree = "<group>"; };
+		46050A1C90DB3C1CC650FCA1 /* MDMeditationsListInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListInitializer.swift; sourceTree = "<group>"; };
+		5027369D082EC84755F7C1A5 /* MDMeditationsListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListPresenter.swift; sourceTree = "<group>"; };
+		5308EC0AE580E2F86C049DC7 /* Pods_MeditationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeditationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75BE54E91330DAE054C4D809 /* MDMeditationsListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListRouterInput.swift; sourceTree = "<group>"; };
+		75EBDE1964274617702652CA /* MDMeditationsListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListInteractor.swift; sourceTree = "<group>"; };
+		75F31A8D208AB982BC588613 /* MDMeditationChartModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartModuleInput.swift; path = ../../../../Meditation/modules/MeditationChart/Presenter/MDMeditationChartModuleInput.swift; sourceTree = "<group>"; };
+		7E4C8A2F51AE182C9B6DDC8B /* MDMeditationChartConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartConfigurator.swift; path = ../../../../Meditation/modules/MeditationChart/Configurator/MDMeditationChartConfigurator.swift; sourceTree = "<group>"; };
+		A3C017F91AC1718E2598EE3D /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
+		BE9BF75F4B2C905A0C65D848 /* MDMeditationChartInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartInteractorInput.swift; path = ../../../../Meditation/modules/MeditationChart/Interactor/MDMeditationChartInteractorInput.swift; sourceTree = "<group>"; };
+		DD6164E7E2B52D9642FC540C /* MDMeditationsListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListRouter.swift; sourceTree = "<group>"; };
+		EB72073C1EFFF2530080FE5F /* HKQueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKQueryService.swift; sourceTree = "<group>"; };
+		EB9908C61F0003A600C4F440 /* IGListKitDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IGListKitDataSource.swift; path = Meditation/modules/MeditationsList/DataSource/IGListKitDataSource.swift; sourceTree = SOURCE_ROOT; };
+		EB9908C91F00086500C4F440 /* MeditationListSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeditationListSectionController.swift; path = Meditation/modules/MeditationsList/SectionController/MeditationListSectionController.swift; sourceTree = SOURCE_ROOT; };
+		EB9908CB1F0009DF00C4F440 /* MeditationListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationListViewCell.swift; sourceTree = "<group>"; };
+		EB9908CD1F0010C700C4F440 /* MeditationModelsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeditationModelsFactory.swift; path = Meditation/modules/MeditationsList/DataSource/MeditationModelsFactory.swift; sourceTree = SOURCE_ROOT; };
+		EBCCAEEF931B31FA7EBF24B6 /* MDMeditationsListInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListInteractorInput.swift; sourceTree = "<group>"; };
 		EBDA52EA1EEED21E00028E1E /* Meditation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meditation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDA52ED1EEED21E00028E1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EBDA52EF1EEED21E00028E1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EBDA52F21EEED21E00028E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBDA52F41EEED21E00028E1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBDA52F71EEED21E00028E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -116,6 +175,11 @@
 		EBE8FC2D1EFE931300D51E18 /* MeditationWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeditationWatch.entitlements; sourceTree = "<group>"; };
 		EBE9A0A51EFE98C9000E5247 /* MeditationWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MeditationWatch Extension.entitlements"; sourceTree = "<group>"; };
 		EBE9A0A61EFE98C9000E5247 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		EC0D0F6FB04EBEBE63198125 /* MDMeditationsListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListViewOutput.swift; sourceTree = "<group>"; };
+		EDF8CBC7B28F79367AEF9F69 /* MDMeditationChartRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartRouter.swift; path = ../../../../Meditation/modules/MeditationChart/Router/MDMeditationChartRouter.swift; sourceTree = "<group>"; };
+		EFDB0A5C98C68F43E4051847 /* Pods-Meditation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meditation/Pods-Meditation.debug.xcconfig"; sourceTree = "<group>"; };
+		F4F8CAC32A1F184D91B68A5C /* MDMeditationsListConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListConfigurator.swift; sourceTree = "<group>"; };
+		F72C40F15F32E64697D8E174 /* Pods_Meditation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meditation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBDA531E1EEED52600028E1E /* HealthKit.framework in Frameworks */,
+				7DC0752E0AF421D1A74AA392 /* Pods_Meditation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9563FD2C614CFBE8C6B82583 /* Pods_MeditationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +225,164 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		177B5DA4CA06F7B70387FAF6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EBCCAEEF931B31FA7EBF24B6 /* MDMeditationsListInteractorInput.swift */,
+				39855EF1154812BF6B7EC0C3 /* MDMeditationsListInteractorOutput.swift */,
+				75EBDE1964274617702652CA /* MDMeditationsListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		19707A908FC75AC3BBFF6BCD /* MeditationChart */ = {
+			isa = PBXGroup;
+			children = (
+				560C44274446003DF89F4A33 /* View */,
+				272ADB38EECB285F0E278CB9 /* Presenter */,
+				7AB3454F3BF3D4C415B40523 /* Interactor */,
+				589BFB70EE7D3CB24F6DB8EB /* Router */,
+				76D131A66D50A1237D075123 /* Configurator */,
+			);
+			path = MeditationChart;
+			sourceTree = "<group>";
+		};
+		272ADB38EECB285F0E278CB9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				75F31A8D208AB982BC588613 /* MDMeditationChartModuleInput.swift */,
+				02B19D5F5D2D5A87249BB7E4 /* MDMeditationChartPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5498D1ECD83C69A7C90ECB17 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				F4F8CAC32A1F184D91B68A5C /* MDMeditationsListConfigurator.swift */,
+				46050A1C90DB3C1CC650FCA1 /* MDMeditationsListInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		560C44274446003DF89F4A33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A45C8708835B62E13F16580 /* MDMeditationChartViewInput.swift */,
+				127E2769D7B56FEF206C57E0 /* MDMeditationChartViewOutput.swift */,
+				265C0C042EC77866A1BA3E46 /* MDMeditationChartViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		589BFB70EE7D3CB24F6DB8EB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				09E26AAF45E9849D121E9109 /* MDMeditationChartRouterInput.swift */,
+				EDF8CBC7B28F79367AEF9F69 /* MDMeditationChartRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		671FABD60ECC692BAD8606BA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3DB21479A094FDF9C56ADDB5 /* MDMeditationsListModuleInput.swift */,
+				5027369D082EC84755F7C1A5 /* MDMeditationsListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		678C24BA35781B1DDC8D8B29 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				B7D2EE9E95AB9B33BA32E1B3 /* MeditationsList */,
+				19707A908FC75AC3BBFF6BCD /* MeditationChart */,
+			);
+			name = modules;
+			path = ../meditation/modules;
+			sourceTree = "<group>";
+		};
+		76D131A66D50A1237D075123 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				7E4C8A2F51AE182C9B6DDC8B /* MDMeditationChartConfigurator.swift */,
+				07C759DD0B83ADFFC3721571 /* MDMeditationChartInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		7AB3454F3BF3D4C415B40523 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BE9BF75F4B2C905A0C65D848 /* MDMeditationChartInteractorInput.swift */,
+				3B5E1F12FD62B4840D8500A0 /* MDMeditationChartInteractorOutput.swift */,
+				19D99FCEFD0807415121C1C6 /* MDMeditationChartInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B3DC90363D1CD7EEEBCDB720 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFDB0A5C98C68F43E4051847 /* Pods-Meditation.debug.xcconfig */,
+				A3C017F91AC1718E2598EE3D /* Pods-Meditation.release.xcconfig */,
+				293A14A9A41A2EA8D68E44F6 /* Pods-MeditationTests.debug.xcconfig */,
+				0B23BFE66AA6B1857D3E74C4 /* Pods-MeditationTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7D2EE9E95AB9B33BA32E1B3 /* MeditationsList */ = {
+			isa = PBXGroup;
+			children = (
+				EB9908C81F00084500C4F440 /* SectionController */,
+				EB9908C51F00038A00C4F440 /* DataSource */,
+				C2E808FD7A7F6B80D3859ED5 /* View */,
+				671FABD60ECC692BAD8606BA /* Presenter */,
+				177B5DA4CA06F7B70387FAF6 /* Interactor */,
+				FA92B0E6FC9D281D5EE1EAD9 /* Router */,
+				5498D1ECD83C69A7C90ECB17 /* Configurator */,
+			);
+			path = MeditationsList;
+			sourceTree = "<group>";
+		};
+		C2E808FD7A7F6B80D3859ED5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C40D3E6CAB5E3762ABFC1CD /* MDMeditationsListViewInput.swift */,
+				EC0D0F6FB04EBEBE63198125 /* MDMeditationsListViewOutput.swift */,
+				1133608DE766FB980242F744 /* MDMeditationsListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB72073B1EFFF2320080FE5F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EB72073C1EFFF2530080FE5F /* HKQueryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EB9908C51F00038A00C4F440 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EB9908C61F0003A600C4F440 /* IGListKitDataSource.swift */,
+				EB9908CD1F0010C700C4F440 /* MeditationModelsFactory.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		EB9908C81F00084500C4F440 /* SectionController */ = {
+			isa = PBXGroup;
+			children = (
+				EB9908C91F00086500C4F440 /* MeditationListSectionController.swift */,
+				EB9908CB1F0009DF00C4F440 /* MeditationListViewCell.swift */,
+			);
+			path = SectionController;
+			sourceTree = "<group>";
+		};
 		EBDA52E11EEED21E00028E1E = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +393,7 @@
 				EBE8FC0E1EFE899E00D51E18 /* MeditationWatch Extension */,
 				EBDA52EB1EEED21E00028E1E /* Products */,
 				EBDA531C1EEED52600028E1E /* Frameworks */,
+				B3DC90363D1CD7EEEBCDB720 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,12 +412,13 @@
 		EBDA52EC1EEED21E00028E1E /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
+				EB72073B1EFFF2320080FE5F /* Services */,
 				EBDA531B1EEED52500028E1E /* Meditation.entitlements */,
 				EBDA52ED1EEED21E00028E1E /* AppDelegate.swift */,
-				EBDA52EF1EEED21E00028E1E /* ViewController.swift */,
 				EBDA52F11EEED21E00028E1E /* Main.storyboard */,
 				EBDA52F41EEED21E00028E1E /* Assets.xcassets */,
 				EBDA52F61EEED21E00028E1E /* LaunchScreen.storyboard */,
+				678C24BA35781B1DDC8D8B29 /* modules */,
 				EBDA52F91EEED21E00028E1E /* Info.plist */,
 			);
 			path = Meditation;
@@ -221,6 +447,8 @@
 			children = (
 				EBE9A0A61EFE98C9000E5247 /* HealthKit.framework */,
 				EBDA531D1EEED52600028E1E /* HealthKit.framework */,
+				F72C40F15F32E64697D8E174 /* Pods_Meditation.framework */,
+				5308EC0AE580E2F86C049DC7 /* Pods_MeditationTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -260,6 +488,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FA92B0E6FC9D281D5EE1EAD9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				75BE54E91330DAE054C4D809 /* MDMeditationsListRouterInput.swift */,
+				DD6164E7E2B52D9642FC540C /* MDMeditationsListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,10 +504,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBDA53121EEED21E00028E1E /* Build configuration list for PBXNativeTarget "Meditation" */;
 			buildPhases = (
+				62C26B89B1039A3792193FBC /* [CP] Check Pods Manifest.lock */,
 				EBDA52E61EEED21E00028E1E /* Sources */,
 				EBDA52E71EEED21E00028E1E /* Frameworks */,
 				EBDA52E81EEED21E00028E1E /* Resources */,
 				EBE8FC261EFE899E00D51E18 /* Embed Watch Content */,
+				794BFF835E4ADFC8C6BFAF65 /* [CP] Embed Pods Frameworks */,
+				ACDC2FB746B59EFD78592960 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,9 +526,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBDA53151EEED21E00028E1E /* Build configuration list for PBXNativeTarget "MeditationTests" */;
 			buildPhases = (
+				9A1621294FCBB187F3FE9A2E /* [CP] Check Pods Manifest.lock */,
 				EBDA52FA1EEED21E00028E1E /* Sources */,
 				EBDA52FB1EEED21E00028E1E /* Frameworks */,
 				EBDA52FC1EEED21E00028E1E /* Resources */,
+				9C0A46FE0D8DE048AECB35FD /* [CP] Embed Pods Frameworks */,
+				3D75FE521779D0C86242EB79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -477,13 +720,134 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D75FE521779D0C86242EB79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeditationTests/Pods-MeditationTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62C26B89B1039A3792193FBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		794BFF835E4ADFC8C6BFAF65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meditation/Pods-Meditation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A1621294FCBB187F3FE9A2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9C0A46FE0D8DE048AECB35FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeditationTests/Pods-MeditationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACDC2FB746B59EFD78592960 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meditation/Pods-Meditation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EBDA52E61EEED21E00028E1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBDA52F01EEED21E00028E1E /* ViewController.swift in Sources */,
 				EBDA52EE1EEED21E00028E1E /* AppDelegate.swift in Sources */,
+				2339BF0DEF58EC8AE2556AA9 /* MDMeditationsListViewInput.swift in Sources */,
+				3A6468B1D5AADBE6C30C6B23 /* MDMeditationsListViewOutput.swift in Sources */,
+				356139A2893337C7512F6606 /* MDMeditationsListViewController.swift in Sources */,
+				8DA88BEEBC34044B1322348A /* MDMeditationsListModuleInput.swift in Sources */,
+				EB9908C71F0003A600C4F440 /* IGListKitDataSource.swift in Sources */,
+				EB9908CE1F0010C700C4F440 /* MeditationModelsFactory.swift in Sources */,
+				7F5E9787B74A3F0EB15F834A /* MDMeditationsListPresenter.swift in Sources */,
+				0518CA35CA9FFCF2B8EBCCC7 /* MDMeditationsListInteractorInput.swift in Sources */,
+				12C2700BC8072B0E27DA5BC6 /* MDMeditationsListInteractorOutput.swift in Sources */,
+				E18501CACB062452CF02EFB0 /* MDMeditationsListInteractor.swift in Sources */,
+				21E47AD9DD1386E757CF64F3 /* MDMeditationsListRouterInput.swift in Sources */,
+				EB9908CA1F00086500C4F440 /* MeditationListSectionController.swift in Sources */,
+				7F9DCDBD4D804E4AF6D4E821 /* MDMeditationsListRouter.swift in Sources */,
+				0E37CEFB26D57CD0C074D7D5 /* MDMeditationsListConfigurator.swift in Sources */,
+				9EB02687EDBECFA94E93BCB4 /* MDMeditationsListInitializer.swift in Sources */,
+				98A373FD0ACE83AE08B4492E /* MDMeditationChartViewInput.swift in Sources */,
+				7E321DC5AE3A6FBA9AA2C3AD /* MDMeditationChartViewOutput.swift in Sources */,
+				AA1B8D110FCFB9E32035CBF0 /* MDMeditationChartViewController.swift in Sources */,
+				EB72073D1EFFF2530080FE5F /* HKQueryService.swift in Sources */,
+				692DF5390402846B38B9019D /* MDMeditationChartModuleInput.swift in Sources */,
+				EB9908CC1F0009DF00C4F440 /* MeditationListViewCell.swift in Sources */,
+				E18E51BE357D08BF24D9AAD4 /* MDMeditationChartPresenter.swift in Sources */,
+				776D03DE41962C44F44B5A5D /* MDMeditationChartInteractorInput.swift in Sources */,
+				4336666BCE06B432DE1E39FA /* MDMeditationChartInteractorOutput.swift in Sources */,
+				C1F48D784EE747CA79F0A68A /* MDMeditationChartInteractor.swift in Sources */,
+				7CCCEED73F62E1D9C9172346 /* MDMeditationChartRouterInput.swift in Sources */,
+				80CD31E0F57F16418FC4EF3E /* MDMeditationChartRouter.swift in Sources */,
+				7969BAB8D52807ADDA81DC88 /* MDMeditationChartConfigurator.swift in Sources */,
+				BB716297DD3FC4FA8039E140 /* MDMeditationChartInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +1041,7 @@
 		};
 		EBDA53131EEED21E00028E1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFDB0A5C98C68F43E4051847 /* Pods-Meditation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Meditation/Meditation.entitlements;
@@ -693,6 +1058,7 @@
 		};
 		EBDA53141EEED21E00028E1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3C017F91AC1718E2598EE3D /* Pods-Meditation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Meditation/Meditation.entitlements;
@@ -709,6 +1075,7 @@
 		};
 		EBDA53161EEED21E00028E1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 293A14A9A41A2EA8D68E44F6 /* Pods-MeditationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -725,6 +1092,7 @@
 		};
 		EBDA53171EEED21E00028E1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B23BFE66AA6B1857D3E74C4 /* Pods-MeditationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

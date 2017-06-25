@@ -1,0 +1,23 @@
+import Foundation
+import UIKit
+
+
+class {{ prefix }}{{ module_info.name }}Presenter : NSObject {
+    
+    weak var view:{{ prefix }}{{ module_info.name }}ViewController?
+    weak var interactor:{{ prefix }}{{ module_info.name }}Interactor?
+    
+    init(view: {{ prefix }}{{ module_info.name }}ViewController, interactor:{{ prefix }}{{ module_info.name }}Interactor){
+        self.view = view
+        self.interactor = interactor
+    }
+    
+    func viewWillAppear() {
+        
+    }
+
+    func onClickLeftBtn() {
+        view?.slideMenuController()?.openLeft()
+    }
+}
+

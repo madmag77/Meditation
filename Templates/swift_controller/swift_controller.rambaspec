@@ -1,0 +1,20 @@
+# Template information section
+name: "swift_controller"
+summary: "VIPER module swift template"
+author: "Arty"
+version: "1.1.4"
+license: "MIT"
+
+# The declarations for code files
+code_files:
+# View layer
+- {name: ViewController.swift, path: Code/View/viewcontroller.swift.liquid}
+
+# Presenter layer
+- {name: Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# Interactor layer
+- {name: Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+
+# Template dependencies
+dependencies:

@@ -1,0 +1,56 @@
+import UIKit
+import EasyPeasy
+
+class {{ prefix }}{{ module_info.name }}ViewController : UIViewController {
+
+    var presenter : {{ prefix }}{{ module_info.name }}Presenter?
+    var interactor: {{ prefix }}{{ module_info.name }}Interactor?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        interactor = {{ prefix }}{{ module_info.name }}Interactor()
+        presenter = {{ prefix }}{{ module_info.name }}Presenter(view:self, interactor:interactor!)
+        interactor!.presenter = presenter
+        createElements() 
+        addSubviews()
+    }
+
+    func createElements() {
+        
+    }
+
+    func addSubviews(){
+
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        setupNavigationController(navigationController: self.navigationController!, titleItem: localize("ADDSKILL_title"), backgroundImage: UIImage(named: "background")!)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: ScaleImage(UIImage(named: "icon_back")!, scale: 0.5).imageWithRenderingMode(.AlwaysOriginal), style: .Done, target: presenter, action: #selector({{ prefix }}{{ module_info.name }}Presenter.onClickLeftBtn))
+        
+        presenter!.viewWillAppear()
+    }
+    
+    func addSubView(view:UIView) {
+        self.view.addSubview(view)
+    }
+
+   override func updateViewConstraints() {
+         
+
+        super.updateViewConstraints();
+    }
+    
+   override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
+
+}
