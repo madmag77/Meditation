@@ -22,6 +22,7 @@ public class WatchHeartRateMonitor: NSObject {
     var healthStore: HKHealthStore = HKHealthStore()
     let readDataTypes: Set<HKObjectType> = [heartRateHKObjectType, meditationHKObjectType]
     let writeDataTypes: Set<HKSampleType> = [meditationHKObjectType]
+    var heartRateQuery: HKAnchoredObjectQuery?
     
     lazy var configuration: HKWorkoutConfiguration = {
         let configuration = HKWorkoutConfiguration()
@@ -77,15 +78,26 @@ public class WatchHeartRateMonitor: NSObject {
     }
     
     fileprivate func workoutStarted() {
-        let heartRateType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)
-        
+        startDataQuering()
+    }
+    
+    fileprivate func workoutEnded() {
+        saveMeditationInStore()
+        stopDataQuering()
+    }
+    
+    fileprivate func startDataQuering() {
         let predicate = HKQuery.predicateForSamples(withStart: workoutSession?.startDate, end: nil, options: [])
         
-        let heartRateQuery = HKAnchoredObjectQuery(type: heartRateType!,
-                                                   predicate: predicate,
-                                                   anchor: HKQueryAnchor(fromValue: Int(HKAnchoredObjectQueryNoAnchor)),
-                                                   limit: 0) { (query, newSamples, deletedSamples, newAnchor, error) -> Void in
-                                                    //not needed to process archive data
+        heartRateQuery = HKAnchoredObjectQuery(type: heartRateHKObjectType,
+                                               predicate: predicate,
+                                               anchor: HKQueryAnchor(fromValue: Int(HKAnchoredObjectQueryNoAnchor)),
+                                               limit: 0) { (query, newSamples, deletedSamples, newAnchor, error) -> Void in
+                                                //not needed to process archive data
+        }
+        
+        guard let heartRateQuery = heartRateQuery else {
+            return
         }
         
         heartRateQuery.updateHandler = { (query, samples, deletedObjects, anchor, error) -> Void in
@@ -99,8 +111,12 @@ public class WatchHeartRateMonitor: NSObject {
         healthStore.execute(heartRateQuery)
     }
     
-    fileprivate func workoutEnded() {
-        saveMeditationInStore()
+    fileprivate func stopDataQuering() {
+        guard let heartRateQuery = heartRateQuery else {
+            return
+        }
+
+        healthStore.stop(heartRateQuery)
     }
     
     fileprivate func saveMeditationInStore() {
