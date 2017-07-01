@@ -25,14 +25,21 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        var items: [WKPickerItem] = []
-        for i in 2..<7 {
-            let item = WKPickerItem()
-            item.title = "\(i*10) min"
-            items.append(item)
+//        var items: [WKPickerItem] = []
+//        for i in 2..<70 {
+//            let item = WKPickerItem()
+//            item.title = "\(i) min"
+//            items.append(item)
+//        }
+//        periodPicker.setItems(items)
+//        periodPicker.setEnabled(true)
+        
+        let pickerItems: [WKPickerItem] = (1...24).map {
+            let pickerItem = WKPickerItem()
+            pickerItem.contentImage = WKImage(imageName: "0\($0*5)prog.png")
+            return pickerItem
         }
-        periodPicker.setItems(items)
-        periodPicker.setEnabled(true)
+        periodPicker.setItems(pickerItems)
     }
     
     override func willActivate() {
@@ -51,6 +58,8 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func startBtnTap() {
+        
+        return;
         hrMonitor.isMonitoring = !hrMonitor.isMonitoring
         hrMonitor.isMonitoring ? startMonitoring() : stopMonitoring()
     }

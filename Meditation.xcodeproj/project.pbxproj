@@ -34,6 +34,8 @@
 		E18501CACB062452CF02EFB0 /* MDMeditationsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EBDE1964274617702652CA /* MDMeditationsListInteractor.swift */; };
 		E18E51BE357D08BF24D9AAD4 /* MDMeditationChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B19D5F5D2D5A87249BB7E4 /* MDMeditationChartPresenter.swift */; };
 		EB72073D1EFFF2530080FE5F /* HKQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72073C1EFFF2530080FE5F /* HKQueryService.swift */; };
+		EB7657F31F07ABF100583C8E /* FastTimeChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7657F21F07ABF100583C8E /* FastTimeChoiceController.swift */; };
+		EB7657F51F07C74E00583C8E /* EditTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7657F41F07C74E00583C8E /* EditTimeController.swift */; };
 		EB9908C71F0003A600C4F440 /* IGListKitDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9908C61F0003A600C4F440 /* IGListKitDataSource.swift */; };
 		EB9908CA1F00086500C4F440 /* MeditationListSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9908C91F00086500C4F440 /* MeditationListSectionController.swift */; };
 		EB9908CC1F0009DF00C4F440 /* MeditationListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9908CB1F0009DF00C4F440 /* MeditationListViewCell.swift */; };
@@ -140,6 +142,8 @@
 		BE9BF75F4B2C905A0C65D848 /* MDMeditationChartInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartInteractorInput.swift; path = ../../../../Meditation/modules/MeditationChart/Interactor/MDMeditationChartInteractorInput.swift; sourceTree = "<group>"; };
 		DD6164E7E2B52D9642FC540C /* MDMeditationsListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListRouter.swift; sourceTree = "<group>"; };
 		EB72073C1EFFF2530080FE5F /* HKQueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKQueryService.swift; sourceTree = "<group>"; };
+		EB7657F21F07ABF100583C8E /* FastTimeChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastTimeChoiceController.swift; sourceTree = "<group>"; };
+		EB7657F41F07C74E00583C8E /* EditTimeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTimeController.swift; sourceTree = "<group>"; };
 		EB9908C61F0003A600C4F440 /* IGListKitDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IGListKitDataSource.swift; path = Meditation/modules/MeditationsList/DataSource/IGListKitDataSource.swift; sourceTree = SOURCE_ROOT; };
 		EB9908C91F00086500C4F440 /* MeditationListSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeditationListSectionController.swift; path = Meditation/modules/MeditationsList/SectionController/MeditationListSectionController.swift; sourceTree = SOURCE_ROOT; };
 		EB9908CB1F0009DF00C4F440 /* MeditationListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationListViewCell.swift; sourceTree = "<group>"; };
@@ -468,6 +472,8 @@
 			isa = PBXGroup;
 			children = (
 				EBE9A0A51EFE98C9000E5247 /* MeditationWatch Extension.entitlements */,
+				EB7657F21F07ABF100583C8E /* FastTimeChoiceController.swift */,
+				EB7657F41F07C74E00583C8E /* EditTimeController.swift */,
 				EBE8FC111EFE899E00D51E18 /* InterfaceController.swift */,
 				EBE8FC131EFE899E00D51E18 /* ExtensionDelegate.swift */,
 				EBE8FC151EFE899E00D51E18 /* NotificationController.swift */,
@@ -874,7 +880,9 @@
 				EBE8FC161EFE899E00D51E18 /* NotificationController.swift in Sources */,
 				EBE8FC181EFE899E00D51E18 /* ComplicationController.swift in Sources */,
 				EBE8FC141EFE899E00D51E18 /* ExtensionDelegate.swift in Sources */,
+				EB7657F31F07ABF100583C8E /* FastTimeChoiceController.swift in Sources */,
 				EBE8FC121EFE899E00D51E18 /* InterfaceController.swift in Sources */,
+				EB7657F51F07C74E00583C8E /* EditTimeController.swift in Sources */,
 				EBE8FC281EFE8E1500D51E18 /* WatchHeartRateMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
