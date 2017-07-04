@@ -54,7 +54,7 @@ public class WatchHeartRateMonitor: NSObject {
         self.healthStore.requestAuthorization(toShare: writeDataTypes, read: readDataTypes) { (success, error) in
             if !success {
                 //TODO: Perform proper error handling here...
-                fatalError("*** Unable to create the workout session: \(error?.localizedDescription) ***")
+                fatalError("*** Unable to create the workout session: \(String(describing: error?.localizedDescription)) ***")
             }
         }
     }
@@ -129,7 +129,7 @@ public class WatchHeartRateMonitor: NSObject {
             guard success else {
                 //TODO: Perform proper error handling here...
                 fatalError("*** An error occurred while saving the " +
-                    "workout: \(error?.localizedDescription)")
+                    "workout: \(String(describing: error?.localizedDescription))")
             }
         }
     }

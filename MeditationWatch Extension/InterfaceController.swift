@@ -58,8 +58,6 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func startBtnTap() {
-        
-        return;
         hrMonitor.isMonitoring = !hrMonitor.isMonitoring
         hrMonitor.isMonitoring ? startMonitoring() : stopMonitoring()
     }
@@ -87,7 +85,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     internal func startTimer() {
-        let interval = TimeInterval(selectedPeriod * 10 * 60)
+        let interval = TimeInterval((selectedPeriod + 1) * 5 * 60)
         timer.stop()
         timer.setDate(Date(timeInterval: interval, since: Date()))
         timer.start()

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cP3-j1-SIk">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cP3-j1-SIk">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13034"/>
     </dependencies>
     <scenes>
         <!--Timer-->
@@ -47,50 +47,102 @@
                     <items>
                         <group width="1" height="38" alignment="left" spacing="8" id="qlG-x6-T6X" userLabel="Group1">
                             <items>
-                                <button width="32" height="32" alignment="left" title="10" backgroundImage="time1" id="1Wq-mX-DUv">
+                                <button width="32" height="32" alignment="left" accessibilityIdentifier="fastBtn1" backgroundImage="oval" id="1Wq-mX-DUv" userLabel="fastBtn1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="tapOnFastBtn1" destination="cP3-j1-SIk" id="8Lb-KR-0cq"/>
+                                    </connections>
+                                </button>
+                                <button width="32" height="32" alignment="left" accessibilityIdentifier="fastBtn2" backgroundImage="oval" id="V51-uU-oef" userLabel="fastBtn2">
                                     <gestureRecognizers>
-                                        <longPressGestureRecognizer id="3hN-TB-D58">
+                                        <longPressGestureRecognizer id="rAA-bJ-Eo1">
                                             <connections>
-                                                <action selector="longTapOnBtn1:" destination="cP3-j1-SIk" id="26l-hj-qYk"/>
+                                                <action selector="longTapOnBtn2:" destination="cP3-j1-SIk" id="nxr-WY-SID"/>
                                             </connections>
                                         </longPressGestureRecognizer>
                                     </gestureRecognizers>
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
-                                        <action selector="tapOnBtn1:" destination="cP3-j1-SIk" id="17B-7g-yrt"/>
+                                        <action selector="tapOnFastBtn2" destination="cP3-j1-SIk" id="kNT-lL-8n7"/>
                                     </connections>
-                                </button>
-                                <button width="32" height="32" alignment="left" title="20" backgroundImage="time2" id="V51-uU-oef">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </button>
                             </items>
                             <edgeInsets key="margins" left="32" right="0.0" top="6" bottom="0.0"/>
                         </group>
-                        <label alignment="center" verticalAlignment="bottom" text="Last sit: 25 min" textAlignment="center" id="gwY-3P-FVP"/>
-                        <group width="1" height="32" alignment="left" spacing="48" id="xMY-5E-I7k" userLabel="Group2">
+                        <group width="0.93000000000000005" height="32" alignment="left" id="xMY-5E-I7k" userLabel="Group2">
                             <items>
-                                <button width="32" height="32" alignment="left" backgroundImage="time1" id="PH8-zn-0Yb"/>
-                                <button width="32" height="32" alignment="left" backgroundImage="time2" id="Wir-3n-Jim"/>
+                                <button width="32" height="32" alignment="left" accessibilityIdentifier="fastBtn6" backgroundImage="oval" id="PH8-zn-0Yb" userLabel="fastBtn6">
+                                    <gestureRecognizers>
+                                        <longPressGestureRecognizer id="MGS-Xf-xqD">
+                                            <connections>
+                                                <action selector="longTapOnBtn6:" destination="cP3-j1-SIk" id="aZ1-fv-2d8"/>
+                                            </connections>
+                                        </longPressGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="tapOnFastBtn6" destination="cP3-j1-SIk" id="xlR-36-ACt"/>
+                                    </connections>
+                                </button>
+                                <button width="32" height="32" alignment="right" accessibilityIdentifier="fastBtn3" backgroundImage="oval" id="Wir-3n-Jim" userLabel="fastBtn3">
+                                    <gestureRecognizers>
+                                        <longPressGestureRecognizer id="4mN-8v-mPc">
+                                            <connections>
+                                                <action selector="longTapOnBtn3:" destination="cP3-j1-SIk" id="Krx-zb-Z2G"/>
+                                            </connections>
+                                        </longPressGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="tapOnFastBtn3" destination="cP3-j1-SIk" id="ifb-GH-0xc"/>
+                                    </connections>
+                                </button>
                             </items>
                             <edgeInsets key="margins" left="12" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
-                        <group width="1" height="32" alignment="left" spacing="8" id="0mJ-BA-M5T" userLabel="Group3">
+                        <group width="0.78000000000000003" height="32" alignment="left" id="0mJ-BA-M5T" userLabel="Group3">
                             <items>
-                                <button width="32" height="32" alignment="left" backgroundImage="time1" id="9XO-0J-zqJ"/>
-                                <button width="32" height="32" alignment="left" backgroundImage="time2" id="QgN-Tr-wPO"/>
+                                <button width="32" height="32" alignment="left" accessibilityIdentifier="fastBtn5" backgroundImage="oval" id="9XO-0J-zqJ" userLabel="fastBtn5">
+                                    <gestureRecognizers>
+                                        <longPressGestureRecognizer id="Jn5-Nc-BYU">
+                                            <connections>
+                                                <action selector="longTapOnBtn5:" destination="cP3-j1-SIk" id="fbW-nD-SaN"/>
+                                            </connections>
+                                        </longPressGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="tapOnFastBtn5" destination="cP3-j1-SIk" id="lbs-Dc-U57"/>
+                                    </connections>
+                                </button>
+                                <button width="32" height="32" alignment="right" accessibilityIdentifier="fastBtn4" backgroundImage="oval" id="QgN-Tr-wPO" userLabel="fastBtn4">
+                                    <gestureRecognizers>
+                                        <longPressGestureRecognizer id="GnM-4P-Qsl">
+                                            <connections>
+                                                <action selector="longTapOnBtn4:" destination="cP3-j1-SIk" id="cwx-fe-tvd"/>
+                                            </connections>
+                                        </longPressGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="tapOnFastBtn4" destination="cP3-j1-SIk" id="q7G-7R-fds"/>
+                                    </connections>
+                                </button>
                             </items>
                             <edgeInsets key="margins" left="32" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
+                        <label alignment="center" verticalAlignment="bottom" text="Last sit: 25 min" textAlignment="center" id="gwY-3P-FVP"/>
                     </items>
-                    <menu key="menu" id="MvQ-kQ-JDk">
-                        <items>
-                            <menuItem title="Add period" icon="add" id="YlF-IK-MBn">
-                                <connections>
-                                    <action selector="addMenuTap" destination="cP3-j1-SIk" id="5Jt-Nb-Vzx"/>
-                                </connections>
-                            </menuItem>
-                        </items>
-                    </menu>
+                    <menu key="menu" id="MvQ-kQ-JDk"/>
+                    <connections>
+                        <outlet property="fastBtn1" destination="1Wq-mX-DUv" id="8e9-YB-44F"/>
+                        <outlet property="fastBtn2" destination="V51-uU-oef" id="aga-E0-hng"/>
+                        <outlet property="fastBtn3" destination="Wir-3n-Jim" id="kDE-q4-uKP"/>
+                        <outlet property="fastBtn4" destination="QgN-Tr-wPO" id="zuH-md-hCM"/>
+                        <outlet property="fastBtn5" destination="9XO-0J-zqJ" id="21Y-jL-va3"/>
+                        <outlet property="fastBtn6" destination="PH8-zn-0Yb" id="YTv-37-01P"/>
+                        <outlet property="lastSitLabel" destination="gwY-3P-FVP" id="Mre-Eb-I34"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="344"/>
@@ -100,17 +152,21 @@
             <objects>
                 <controller identifier="EditTimeController" title="Choose period" id="759-f5-fCb" customClass="EditTimeController" customModule="MeditationWatch_Extension">
                     <items>
-                        <picker height="111" alignment="center" style="sequence" id="C4B-9f-af2" userLabel="period"/>
+                        <picker height="111" alignment="center" style="sequence" id="C4B-9f-af2" userLabel="period">
+                            <connections>
+                                <action selector="pickerDidChoose:" destination="759-f5-fCb" id="SBP-Bs-zCJ"/>
+                            </connections>
+                        </picker>
                         <group width="1" height="35" alignment="left" verticalAlignment="center" id="seZ-PW-hPe">
                             <items>
                                 <button alignment="left" verticalAlignment="center" backgroundImage="del" id="7pf-Gp-pVG">
                                     <connections>
-                                        <action selector="deleteBtnTap" destination="759-f5-fCb" id="vEE-JK-MlL"/>
+                                        <action selector="deleteBtnTap" destination="759-f5-fCb" id="yLL-LL-RZa"/>
                                     </connections>
                                 </button>
                                 <button alignment="right" verticalAlignment="center" backgroundImage="add" id="2tO-Gi-XWB">
                                     <connections>
-                                        <action selector="addBtnTap" destination="759-f5-fCb" id="fiH-WQ-pfQ"/>
+                                        <action selector="addBtnTap" destination="759-f5-fCb" id="Jup-Df-PfX"/>
                                     </connections>
                                 </button>
                             </items>

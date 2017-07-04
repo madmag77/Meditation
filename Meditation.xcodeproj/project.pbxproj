@@ -33,9 +33,14 @@
 		C1F48D784EE747CA79F0A68A /* MDMeditationChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D99FCEFD0807415121C1C6 /* MDMeditationChartInteractor.swift */; };
 		E18501CACB062452CF02EFB0 /* MDMeditationsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EBDE1964274617702652CA /* MDMeditationsListInteractor.swift */; };
 		E18E51BE357D08BF24D9AAD4 /* MDMeditationChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B19D5F5D2D5A87249BB7E4 /* MDMeditationChartPresenter.swift */; };
+		EB5462EF1F08E9FB0044891B /* FastTimeChoiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5462EE1F08E9FB0044891B /* FastTimeChoiceInteractor.swift */; };
 		EB72073D1EFFF2530080FE5F /* HKQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72073C1EFFF2530080FE5F /* HKQueryService.swift */; };
 		EB7657F31F07ABF100583C8E /* FastTimeChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7657F21F07ABF100583C8E /* FastTimeChoiceController.swift */; };
 		EB7657F51F07C74E00583C8E /* EditTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7657F41F07C74E00583C8E /* EditTimeController.swift */; };
+		EB8F8EE41F08E0F300AD262C /* FastTimeChoicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8F8EE31F08E0F300AD262C /* FastTimeChoicePresenter.swift */; };
+		EB8F8EE71F08E27800AD262C /* FastTimeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8F8EE61F08E27800AD262C /* FastTimeModuleBuilder.swift */; };
+		EB8F8EEA1F08EDDB00AD262C /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8F8EE91F08EDDB00AD262C /* models.swift */; };
+		EB8F8EED1F08EED000AD262C /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8F8EEC1F08EED000AD262C /* StorageService.swift */; };
 		EB9908C71F0003A600C4F440 /* IGListKitDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9908C61F0003A600C4F440 /* IGListKitDataSource.swift */; };
 		EB9908CA1F00086500C4F440 /* MeditationListSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9908C91F00086500C4F440 /* MeditationListSectionController.swift */; };
 		EB9908CC1F0009DF00C4F440 /* MeditationListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9908CB1F0009DF00C4F440 /* MeditationListViewCell.swift */; };
@@ -138,12 +143,18 @@
 		75EBDE1964274617702652CA /* MDMeditationsListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListInteractor.swift; sourceTree = "<group>"; };
 		75F31A8D208AB982BC588613 /* MDMeditationChartModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartModuleInput.swift; path = ../../../../Meditation/modules/MeditationChart/Presenter/MDMeditationChartModuleInput.swift; sourceTree = "<group>"; };
 		7E4C8A2F51AE182C9B6DDC8B /* MDMeditationChartConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartConfigurator.swift; path = ../../../../Meditation/modules/MeditationChart/Configurator/MDMeditationChartConfigurator.swift; sourceTree = "<group>"; };
+		9F877C0EE7C18BB4A0E4BCAA /* Pods_MeditationWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeditationWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C017F91AC1718E2598EE3D /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
 		BE9BF75F4B2C905A0C65D848 /* MDMeditationChartInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartInteractorInput.swift; path = ../../../../Meditation/modules/MeditationChart/Interactor/MDMeditationChartInteractorInput.swift; sourceTree = "<group>"; };
 		DD6164E7E2B52D9642FC540C /* MDMeditationsListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListRouter.swift; sourceTree = "<group>"; };
+		EB5462EE1F08E9FB0044891B /* FastTimeChoiceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastTimeChoiceInteractor.swift; sourceTree = "<group>"; };
 		EB72073C1EFFF2530080FE5F /* HKQueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKQueryService.swift; sourceTree = "<group>"; };
 		EB7657F21F07ABF100583C8E /* FastTimeChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastTimeChoiceController.swift; sourceTree = "<group>"; };
 		EB7657F41F07C74E00583C8E /* EditTimeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTimeController.swift; sourceTree = "<group>"; };
+		EB8F8EE31F08E0F300AD262C /* FastTimeChoicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastTimeChoicePresenter.swift; sourceTree = "<group>"; };
+		EB8F8EE61F08E27800AD262C /* FastTimeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastTimeModuleBuilder.swift; sourceTree = "<group>"; };
+		EB8F8EE91F08EDDB00AD262C /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
+		EB8F8EEC1F08EED000AD262C /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		EB9908C61F0003A600C4F440 /* IGListKitDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IGListKitDataSource.swift; path = Meditation/modules/MeditationsList/DataSource/IGListKitDataSource.swift; sourceTree = SOURCE_ROOT; };
 		EB9908C91F00086500C4F440 /* MeditationListSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeditationListSectionController.swift; path = Meditation/modules/MeditationsList/SectionController/MeditationListSectionController.swift; sourceTree = SOURCE_ROOT; };
 		EB9908CB1F0009DF00C4F440 /* MeditationListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationListViewCell.swift; sourceTree = "<group>"; };
@@ -181,6 +192,7 @@
 		EBE9A0A61EFE98C9000E5247 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		EC0D0F6FB04EBEBE63198125 /* MDMeditationsListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListViewOutput.swift; sourceTree = "<group>"; };
 		EDF8CBC7B28F79367AEF9F69 /* MDMeditationChartRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDMeditationChartRouter.swift; path = ../../../../Meditation/modules/MeditationChart/Router/MDMeditationChartRouter.swift; sourceTree = "<group>"; };
+		EFAE3988B64AF367359926CB /* Pods_MeditationWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeditationWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFDB0A5C98C68F43E4051847 /* Pods-Meditation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meditation/Pods-Meditation.debug.xcconfig"; sourceTree = "<group>"; };
 		F4F8CAC32A1F184D91B68A5C /* MDMeditationsListConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MDMeditationsListConfigurator.swift; sourceTree = "<group>"; };
 		F72C40F15F32E64697D8E174 /* Pods_Meditation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meditation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -369,6 +381,33 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		EB8F8EE51F08E10000AD262C /* FastTimeModule */ = {
+			isa = PBXGroup;
+			children = (
+				EB7657F21F07ABF100583C8E /* FastTimeChoiceController.swift */,
+				EB8F8EE31F08E0F300AD262C /* FastTimeChoicePresenter.swift */,
+				EB8F8EE61F08E27800AD262C /* FastTimeModuleBuilder.swift */,
+				EB5462EE1F08E9FB0044891B /* FastTimeChoiceInteractor.swift */,
+			);
+			path = FastTimeModule;
+			sourceTree = "<group>";
+		};
+		EB8F8EE81F08EDC000AD262C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB8F8EE91F08EDDB00AD262C /* models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EB8F8EEB1F08EEB900AD262C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EB8F8EEC1F08EED000AD262C /* StorageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EB9908C51F00038A00C4F440 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +492,8 @@
 				EBDA531D1EEED52600028E1E /* HealthKit.framework */,
 				F72C40F15F32E64697D8E174 /* Pods_Meditation.framework */,
 				5308EC0AE580E2F86C049DC7 /* Pods_MeditationTests.framework */,
+				9F877C0EE7C18BB4A0E4BCAA /* Pods_MeditationWatch.framework */,
+				EFAE3988B64AF367359926CB /* Pods_MeditationWatch_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -471,8 +512,10 @@
 		EBE8FC0E1EFE899E00D51E18 /* MeditationWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EB8F8EEB1F08EEB900AD262C /* Services */,
+				EB8F8EE81F08EDC000AD262C /* Models */,
 				EBE9A0A51EFE98C9000E5247 /* MeditationWatch Extension.entitlements */,
-				EB7657F21F07ABF100583C8E /* FastTimeChoiceController.swift */,
+				EB8F8EE51F08E10000AD262C /* FastTimeModule */,
 				EB7657F41F07C74E00583C8E /* EditTimeController.swift */,
 				EBE8FC111EFE899E00D51E18 /* InterfaceController.swift */,
 				EBE8FC131EFE899E00D51E18 /* ExtensionDelegate.swift */,
@@ -878,13 +921,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8F8EE41F08E0F300AD262C /* FastTimeChoicePresenter.swift in Sources */,
+				EB8F8EED1F08EED000AD262C /* StorageService.swift in Sources */,
 				EBE8FC161EFE899E00D51E18 /* NotificationController.swift in Sources */,
 				EBE8FC181EFE899E00D51E18 /* ComplicationController.swift in Sources */,
+				EB8F8EE71F08E27800AD262C /* FastTimeModuleBuilder.swift in Sources */,
 				EBE8FC141EFE899E00D51E18 /* ExtensionDelegate.swift in Sources */,
 				EB7657F31F07ABF100583C8E /* FastTimeChoiceController.swift in Sources */,
+				EB5462EF1F08E9FB0044891B /* FastTimeChoiceInteractor.swift in Sources */,
 				EBE8FC121EFE899E00D51E18 /* InterfaceController.swift in Sources */,
 				EB7657F51F07C74E00583C8E /* EditTimeController.swift in Sources */,
 				EBE8FC281EFE8E1500D51E18 /* WatchHeartRateMonitor.swift in Sources */,
+				EB8F8EEA1F08EDDB00AD262C /* models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
