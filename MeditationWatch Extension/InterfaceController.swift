@@ -20,19 +20,16 @@ class InterfaceController: WKInterfaceController {
         WatchHeartRateMonitor(with: self as WatchHeartRateMonitorDelegate)
     } ()
     
+    // in minutes
     var selectedPeriod: Int = 0
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        guard let context = context as? FastTimeChoice else {
+            return
+        }
         
-//        var items: [WKPickerItem] = []
-//        for i in 2..<70 {
-//            let item = WKPickerItem()
-//            item.title = "\(i) min"
-//            items.append(item)
-//        }
-//        periodPicker.setItems(items)
-//        periodPicker.setEnabled(true)
+        selectedPeriod  = Int(context.value)
         
         let pickerItems: [WKPickerItem] = (1...24).map {
             let pickerItem = WKPickerItem()
@@ -40,21 +37,18 @@ class InterfaceController: WKInterfaceController {
             return pickerItem
         }
         periodPicker.setItems(pickerItems)
+        periodPicker.setSelectedItemIndex(selectedPeriod / 5 - 1)
+        
+        startBtnTap()
     }
     
     override func willActivate() {
-        periodPicker.setSelectedItemIndex(selectedPeriod)
-        
         super.willActivate()
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
-    }
-
-    @IBAction func periodChoosed(_ value: Int) {
-        selectedPeriod = value
     }
     
     @IBAction func startBtnTap() {
@@ -71,9 +65,10 @@ class InterfaceController: WKInterfaceController {
     
     internal func stopMonitoring() {
         periodPicker.setEnabled(true)
-        startBtn.setTitle("Start")
+        startBtn.setTitle("Continue")
         stopTimer()
         notifyUserMeditationStop()
+        pop()
     }
     
     internal func notifyUserMeditationStop() {
@@ -85,7 +80,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     internal func startTimer() {
-        let interval = TimeInterval((selectedPeriod + 1) * 5 * 60)
+        let interval = TimeInterval(selectedPeriod * 60)
         timer.stop()
         timer.setDate(Date(timeInterval: interval, since: Date()))
         timer.start()
@@ -95,13 +90,13 @@ class InterfaceController: WKInterfaceController {
     }
     
     internal func stopTimer() {
-         timer.stop()
+        timer.stop()
     }
 }
 
 extension InterfaceController: WatchHeartRateMonitorDelegate {
     func updateHeartRate(_ value: Double) {
-        heartRateLabel.setText("\(Int(value)) \(heartRateUnitString)")
+        heartRateLabel.setText("\(Int(value)) c/min")
     }
     
     

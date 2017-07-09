@@ -13,7 +13,7 @@
             <objects>
                 <controller identifier="TimerController" title="Timer" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MeditationWatch" customModuleProvider="target">
                     <items>
-                        <picker height="80" alignment="center" style="sequence" focusStyle="stack" indicatorMode="shownWhileFocused" id="8ld-nf-k3k" userLabel="period">
+                        <picker height="80" alignment="center" style="sequence" id="8ld-nf-k3k" userLabel="period">
                             <connections>
                                 <action selector="periodChoosed:" destination="AgC-eL-Hgc" id="Mgy-hy-BdZ"/>
                             </connections>
@@ -21,7 +21,7 @@
                         <group width="1" alignment="left" id="hbB-Ii-ZJg">
                             <items>
                                 <timer alignment="left" textAlignment="center" format="abbreviated" id="efR-tS-LZA"/>
-                                <label alignment="right" text="Yet no data" id="eJp-Uf-1tY" userLabel="heartRate"/>
+                                <label alignment="right" text="No data" id="eJp-Uf-1tY" userLabel="heartRate"/>
                             </items>
                         </group>
                         <button width="1" alignment="left" title="Start" id="TEA-Vh-1Nt">

@@ -5,9 +5,10 @@ use_frameworks!
 	 	pod 'Charts'
 	 	pod 'IGListKit'
 
-	  target "MeditationTests" do
+	  target 'MeditationTests' do
 	  	inherit! :search_paths
 	  end
+  
 	end
 
 
